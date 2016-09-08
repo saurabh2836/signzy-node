@@ -1,0 +1,36 @@
+{
+  "name": "blog",
+  "plural": "blog",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "id": {
+      "type": "number",
+      "required": true,
+      "default": 0
+    },
+    "title": {
+      "type": "string",
+      "required": true,
+      "default": "Blog Title is required ?"
+    },
+    "content": {
+      "type": "string",
+      "required": true,
+      "default": "Blog content is required ?"
+    }
+  },
+  "validations": [],
+  "relations": {
+    "blog": {
+      "type": "hasOne",
+      "model": "users",
+      "foreignKey": "id"
+    }
+  },
+  "acls": [],
+  "methods": {}
+}

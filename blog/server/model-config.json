@@ -1,0 +1,47 @@
+{
+  "_meta": {
+    "sources": [
+      "loopback/common/models",
+      "loopback/server/models",
+      "../common/models",
+      "./models"
+    ],
+    "mixins": [
+      "loopback/common/mixins",
+      "loopback/server/mixins",
+      "../common/mixins",
+      "./mixins"
+    ]
+  },
+  "User": {
+    "dataSource": "signzy-node"
+  },
+  "AccessToken": {
+    "dataSource": "signzy-node",
+    "public": false
+  },
+  "ACL": {
+    "dataSource": "signzy-node",
+    "public": false
+  },
+  "RoleMapping": {
+    "dataSource": "signzy-node",
+    "public": false
+  },
+  "Role": {
+    "dataSource": "signzy-node",
+    "public": false
+  },
+  "user-blog": {
+    "dataSource": "signzy-node",
+    "public": true
+  },
+  "users": {
+    "dataSource": "signzy-node",
+    "public": true
+  },
+  "blog": {
+    "dataSource": "signzy-node",
+    "public": true
+  }
+}

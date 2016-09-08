@@ -1,0 +1,25 @@
+{
+  "name": "user-blog",
+  "plural": "blogs",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "firstname": {
+      "type": "string",
+      "required": true,
+      "default": "Enter the firstname"
+    },
+    "lastname": {
+      "type": "string",
+      "required": true,
+      "default": "Enter the lastname"
+    }
+  },
+  "validations": [],
+  "relations": {},
+  "acls": [],
+  "methods": {}
+}

@@ -1,0 +1,37 @@
+{
+  "name": "users",
+  "plural": "users",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "id": {
+      "type": "number",
+      "required": true,
+      "default": 0
+    },
+    "FirstName": {
+      "type": "string",
+      "required": true,
+      "default": "First Name is required ?"
+    },
+    "LastName": {
+      "type": "string",
+      "required": true,
+      "default": "Last Name is required ?"
+    }
+  },
+  "validations": [],
+  "relations": {
+    "user-blog": {
+      "type": "hasMany",
+      "model": "blog",
+      "foreignKey": "id",
+      "through": "users"
+    }
+  },
+  "acls": [],
+  "methods": {}
+}
